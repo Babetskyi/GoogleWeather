@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Google maps & openWeather API</title>
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        background: #000;
+      }
+      .input {
+        position: absolute;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        top: 20px;
+      }
+      .inputValue {
+        max-width: 700px;
+        width: 100%;
+        background: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 10px 20px;
+        height: 25px;
+        outline: none;
+        font-size: 20px;
+      }
+      #map {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .button {
+        position: relative;
+        left: -53px;
+        border: none;
+        width: 150px;
+        font-size: 25px;
+        background: red;
+        border-radius: 0px 22px 22px 0px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.5s;
+      }
+      .button:hover {
+        background: yellow;
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <input type="text" class="inputValue" placeholder="Введіть місто" />
+      <input type="submit" value="Пошук" class="button" />
+    </div>
+
+    <div id="map"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
